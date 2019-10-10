@@ -1,0 +1,33 @@
+/*** colors ***/
+$primary-color: #000000;
+$secondary-color: #111111;
+$text-color: #292929;
+$background-color: #e4e4e6;
+
+/*** font size ***/
+$font-size-l4: 1rem * 8 / 4;
+$font-size-l3: 1rem * 8 / 5;
+$font-size-l2: 1rem * 8 / 6;
+$font-size-l1: 1rem * 8 / 7;
+$font-size-m: 1rem;
+$font-size-s1: 1rem * 8 / 9;
+$font-size-s2: 1rem * 8 / 10;
+$font-size-s3: 1rem * 8 / 11;
+$font-size-s4: 1rem * 8 / 12;
+
+/*** responsive ***/
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin raptop {
+  @media screen and (min-width: 1264px) {
+    @content;
+  }
+}
