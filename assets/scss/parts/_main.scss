@@ -1,5 +1,9 @@
 .main {
-  flex-basis: 65%;
+  max-width: 100%;
+  flex-basis: 100%;
   padding: 24px 64px;
   background-color: $background-color;
+  @include tablet {
+    flex-basis: 65%;
+  }
 }

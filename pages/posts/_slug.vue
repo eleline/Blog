@@ -50,5 +50,6 @@ pre {
   color: #fcfcfc;
   background-color: #23241f;
   border-radius: calc(1rem / 2.4);
+  overflow-x: auto;
 }
 </style>

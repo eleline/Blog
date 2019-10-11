@@ -31,3 +31,10 @@ $font-size-s4: 1rem * 8 / 12;
     @content;
   }
 }
+
+/* dark theme */
+@mixin dark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}

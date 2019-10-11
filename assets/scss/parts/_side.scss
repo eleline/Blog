@@ -1,5 +1,10 @@
 .side {
-  flex-basis: 35%;
+  display: none;
+  flex-basis: 0%;
   padding: 24px;
   background-color: #fff;
+  @include tablet {
+    display: block;
+    flex-basis: 35%;
+  }
 }
