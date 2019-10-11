@@ -49,7 +49,7 @@ module.exports = {
   css: [{ src: "~/assets/scss/style.scss", lang: "scss" }],
   env: {
     API_KEY: process.env.API_KEY,
-    baseUrl
+    baseUrl: process.env.baseUrl
   },
   generate: {
     routes() {
