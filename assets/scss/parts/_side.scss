@@ -1,10 +1,9 @@
 .side {
   display: none;
-  flex-basis: 0%;
-  padding: 24px;
-  background-color: #fff;
-  @include tablet {
+  padding: 32px $padding-p-h;
+  background-color: $background-color;
+  @include desktop {
     display: block;
-    flex-basis: 35%;
+    width: 35%;
   }
 }

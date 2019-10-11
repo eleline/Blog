@@ -1,7 +1,13 @@
 .header {
   display: flex;
-  padding: 8px 64px;
+  padding: 8px $padding-p-h;
   background-color: #292929;
+  @include tablet {
+    padding: 8px ($padding-p-h * 2);
+  }
+  @include raptop {
+    padding: 8px $padding-p-h 8px ($padding-p-h * 4);
+  }
 }
 .logo {
   color: #fcfcfc;

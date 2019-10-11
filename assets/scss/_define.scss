@@ -32,9 +32,12 @@ $font-size-s4: 1rem * 8 / 12;
   }
 }
 
-/* dark theme */
+/*** dark theme ***/
 @mixin dark {
   @media (prefers-color-scheme: dark) {
     @content;
   }
 }
+
+/* contents padding horizontal */
+$padding-p-h: 32px;

@@ -1,8 +1,5 @@
 <template>
   <div>
-    <!-- render data of the person -->
-    <!-- <h2>{{ posts.contents }}</h2> -->
-    <!-- render blog posts -->
     <ul>
       <nuxt-link v-for="(post, index) in posts.contents" :key="index" :to="'posts/' + post.id">
         <li>{{ post.title }}</li>

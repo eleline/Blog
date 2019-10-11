@@ -1,9 +1,15 @@
 .main {
   max-width: 100%;
-  flex-basis: 100%;
-  padding: 24px 64px;
-  background-color: $background-color;
+  width: 100%;
+  padding: 32px $padding-p-h;
+  background-color: #fcfcfc;
   @include tablet {
-    flex-basis: 65%;
+    padding: 32px ($padding-p-h * 2);
+  }
+  @include desktop {
+    width: 65%;
+  }
+  @include raptop {
+    padding: 32px ($padding-p-h * 2) 32px ($padding-p-h * 4);
   }
 }
