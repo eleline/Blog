@@ -1,47 +1,47 @@
 <template>
   <div>
     <!-- render data of the person -->
-    <h2>{{ person.fields.name }}</h2>
+    <!-- <h2>{{ posts.contents }}</h2> -->
     <!-- render blog posts -->
     <ul>
-      <nuxt-link :to="'posts/'+post.fields.slug" v-for="(post, index) in posts" :key="index">
-        <li>{{ post.fields.title }}</li>
+      <nuxt-link v-for="(post, index) in posts.contents" :key="index" :to="'posts/' + post.slug">
+        <li>{{ post.title }}</li>
       </nuxt-link>
     </ul>
   </div>
 </template>
 
 <script>
-import { createClient } from "~/plugins/contentful.js";
-
-const client = createClient();
+import axios from "axios";
 
 export default {
-  // `env` is available in the context object
-  asyncData({ env }) {
-    return Promise.all([
-      // fetch the owner of the blog
-      client.getEntries({
-        "sys.id": env.CTF_PERSON_ID
-      }),
-      // fetch all blog posts sorted by creation date
-      client.getEntries({
-        content_type: env.CTF_BLOG_POST_TYPE_ID,
-        order: "-sys.createdAt"
+  async asyncData({ env }) {
+    const data = await axios
+      .get(`${env.baseUrl}/blog`, {
+        headers: {
+          "X-API-KEY": env.API_KEY
+        }
       })
-    ])
-      .then(([entries, posts]) => {
-        // return data that should be available
-        // in the template
-        return {
-          person: entries.items[0],
-          posts: posts.items
-        };
+      .then(res => {
+        return JSON.parse(JSON.stringify(res.data));
       })
       .catch(console.error);
+
+    return { posts: data };
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.card-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex-basis: 30%;
+  height: 240px;
+  border-radius: 10px;
+}
 </style>

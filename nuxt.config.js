@@ -1,4 +1,5 @@
-const config = require("./.contentful.json");
+require("dotenv").config();
+const { API_KEY, baseUrl } = process.env;
 
 module.exports = {
   /*
@@ -47,26 +48,12 @@ module.exports = {
   },
   css: [{ src: "~/assets/scss/style.scss", lang: "scss" }],
   env: {
-    CTF_SPACE_ID: config.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
-    CTF_PERSON_ID: config.CTF_PERSON_ID,
-    CTF_BLOG_POST_TYPE_ID: config.CTF_BLOG_POST_TYPE_ID
+    API_KEY: process.env.API_KEY,
+    baseUrl
   },
   generate: {
     routes() {
-      return client
-        .getEntries({
-          content_type: process.env.CTF_BLOG_POST_TYPE_ID,
-          order: "-sys.createdAt"
-        })
-        .then(entries => {
-          return entries.items.map(entry => {
-            return {
-              route: `posts/${entry.fields.slug}`,
-              payload: entry
-            };
-          });
-        });
+      /* ここにgenerate用のroutesを記入する */
     }
   }
 };

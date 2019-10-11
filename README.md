@@ -2,6 +2,14 @@
 
 > eleline blog
 
+JAMStack ブログテンプレート
+
+## Use
+
+- Nuxt
+- Netfily
+- microCMS
+
 ## Build Setup
 
 ```bash

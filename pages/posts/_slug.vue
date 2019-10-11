@@ -1,42 +1,43 @@
+<style src='highlight.js/styles/tomorrow-night.css'></style>
+
 <template>
   <div>
-    <p>{{ posts[0].fields.title }}</p>
-    <div v-html="mkbody" />
+    <h1 class="article-title">{{ currentTitle }}</h1>
+    <div v-if="loading">Loading</div>
+    <div v-if="!loading" v-html="mkbody" />
   </div>
 </template>
+
 <script>
+import axios from "axios";
 import marked from "marked";
 import hljs from "highlight.js";
-import { createClient } from "~/plugins/contentful.js";
-
-const client = createClient();
 
 export default {
-  asyncData({ env }) {
-    return Promise.all([
-      // fetch the owner of the blog
-      client.getEntries({
-        "sys.id": env.CTF_PERSON_ID
-      }),
-      // fetch all blog posts sorted by creation date
-      client.getEntries({
-        content_type: env.CTF_BLOG_POST_TYPE_ID,
-        order: "-sys.createdAt"
+  data() {
+    return { loading: true, currentBody: "Loading", currentTitle: "" };
+  },
+  async asyncData({ env }) {
+    const data = await axios
+      .get(`${env.baseUrl}/blog`, {
+        headers: {
+          "X-API-KEY": env.API_KEY
+        }
       })
-    ])
-      .then(([entries, posts]) => {
-        // return data that should be available
-        // in the template
-        return {
-          person: entries.items[0],
-          posts: posts.items
-        };
+      .then(res => {
+        return JSON.parse(JSON.stringify(res.data));
       })
       .catch(console.error);
+
+    return {
+      loading: false,
+      currentBody: data.contents[1].body,
+      currentTitle: data.contents[1].title
+    };
   },
   computed: {
     mkbody() {
-      return marked(this.posts[0].fields.body);
+      return marked(this.currentBody);
     }
   },
   created() {
@@ -49,4 +50,15 @@ export default {
   }
 };
 </script>
-<style src='highlight.js/styles/tomorrow-night.css'></style>
+
+<style lang="scss">
+.article-title {
+  margin-bottom: 24px;
+}
+pre {
+  padding: 1.3rem;
+  color: #fcfcfc;
+  background-color: #23241f;
+  border-radius: calc(1rem / 2.4);
+}
+</style>
