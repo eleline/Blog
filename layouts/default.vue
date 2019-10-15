@@ -6,10 +6,7 @@
       </nuxt-link>
     </header>
     <div class="container">
-      <main class="main">
-        <nuxt />
-      </main>
-      <div class="side">サイド要素</div>
+      <nuxt />
     </div>
     <footer class="footer">
       <p class="copyright">©eleline 2019</p>
@@ -20,6 +17,6 @@
 <style lang="scss">
 .container {
   display: flex;
-  min-height: 90vh;
+  height: auto;
 }
 </style>

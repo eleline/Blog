@@ -16,13 +16,13 @@ $font-size-s3: 1rem * 8 / 11;
 $font-size-s4: 1rem * 8 / 12;
 
 /*** responsive ***/
-@mixin desktop {
-  @media screen and (min-width: 1024px) {
+@mixin tablet {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }
-@mixin tablet {
-  @media screen and (min-width: 768px) {
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
     @content;
   }
 }

@@ -1,8 +1,11 @@
 <template>
-  <div>
-    <h1 class="article-title">{{ currentTitle }}</h1>
-    <div v-if="loading">Loading</div>
-    <div v-if="!loading" v-html="currentBody" />
+  <div class="full">
+    <div class="main">
+      <h1 class="article-title">{{ currentTitle }}</h1>
+      <div v-if="loading">Loading</div>
+      <div v-if="!loading" v-html="currentBody" />
+    </div>
+    <div class="side">サイド</div>
   </div>
 </template>
 
@@ -32,6 +35,8 @@ export default {
       })
       .catch(console.error);
 
+    console.log(data);
+
     return {
       loading: false,
       currentBody: data.body,
@@ -42,6 +47,11 @@ export default {
 </script>
 
 <style lang="scss">
+.full {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
 .article-title {
   margin-bottom: 24px;
 }
