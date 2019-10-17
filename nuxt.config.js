@@ -54,7 +54,21 @@ module.exports = {
   },
   generate: {
     routes() {
-      /* ここにgenerate用のroutesを記入する */
+      return axios
+        .get(`${process.env.baseUrl}/blog`, {
+          headers: {
+            "X-API-KEY": process.env.API_KEY
+          }
+        })
+        .then(res => {
+          return JSON.parse(JSON.stringify(res.data.contents)).map(content => {
+            return {
+              route: "/posts/" + content.id,
+              payload: content
+            };
+          });
+        })
+        .catch(console.error);
     }
   }
 };
