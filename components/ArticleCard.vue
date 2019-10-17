@@ -43,6 +43,6 @@ export default {
 
 .card__title {
   margin-bottom: 12px;
-  border-bottom: solid 1px #acb6e5;
+  border-bottom: solid 2px #acb6e5;
 }
 </style>
