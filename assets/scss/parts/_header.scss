@@ -9,6 +9,7 @@
   border-bottom: solid 1px $gray_color;
   background-color: rgba(#fcfcfc, 0.8);
   backdrop-filter: blur(8px);
+  z-index: 1;
   @include tablet {
     padding: 8px ($padding-p-h * 2);
   }
