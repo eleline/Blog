@@ -17,6 +17,5 @@
 <style lang="scss">
 .container {
   display: flex;
-  height: auto;
 }
 </style>
