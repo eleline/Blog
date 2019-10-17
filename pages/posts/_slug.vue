@@ -35,8 +35,6 @@ export default {
       })
       .catch(console.error);
 
-    console.log(data);
-
     return {
       loading: false,
       currentBody: data.body,
@@ -61,5 +59,8 @@ pre {
   background-color: #23241f;
   border-radius: calc(1rem / 2.4);
   overflow-x: auto;
+  @media (prefers-color-scheme: dark) {
+    background-color: #333;
+  }
 }
 </style>

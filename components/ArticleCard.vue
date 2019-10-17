@@ -28,17 +28,16 @@ export default {
 .card {
   display: block;
   flex-basis: 100%;
-  height: 240px;
-  margin-bottom: 32px;
+  height: auto;
+  margin-bottom: 24px;
   padding: (8px * 1.5);
+  border: solid 1px #a9a9a9;
   border-radius: 10px;
+  color: #292929;
   background-color: #fcfcfc;
-  box-shadow: 8px 4px 19px -6px rgba(0, 0, 0, 0.25);
-  @media screen and (min-width: 768px) {
-    flex-basis: 30%;
-  }
-  @media screen and (min-width: 1264px) {
-    flex-basis: 20.25%;
+  @media (prefers-color-scheme: dark) {
+    color: #fcfcfc;
+    background-color: #292929;
   }
 }
 </style>

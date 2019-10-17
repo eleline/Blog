@@ -4,6 +4,9 @@
   justify-content: center;
   align-items: center;
   background-color: #292929;
+  @include dark {
+    background-color: #000;
+  }
 }
 .copyright {
   color: #fcfcfc;

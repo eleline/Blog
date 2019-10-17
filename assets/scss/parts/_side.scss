@@ -6,4 +6,7 @@
     display: block;
     width: 35%;
   }
+  @include dark {
+    background-color: #333;
+  }
 }

@@ -12,4 +12,7 @@
   @include raptop {
     padding: 32px ($padding-p-h * 2) 32px ($padding-p-h * 4);
   }
+  @include dark {
+    background-color: #292929;
+  }
 }

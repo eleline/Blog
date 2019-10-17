@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <h2>新着記事</h2>
     <ArticleCard :posts="posts"></ArticleCard>
   </div>
 </template>
@@ -34,7 +35,6 @@ export default {
 .main {
   width: 100%;
   height: 100%;
-  background-color: #e4e4e6;
   @media screen and (min-width: 768px) {
     padding: 32px 64px;
   }
