@@ -6,7 +6,7 @@
       :key="index"
       :to="'posts/' + post.id"
     >
-      <h2>{{ post.title }}</h2>
+      <h3 class="card__title">{{ post.title }}</h3>
       <p>{{ post.description }}</p>
     </nuxt-link>
   </div>
@@ -30,7 +30,7 @@ export default {
   flex-basis: 100%;
   height: auto;
   margin-bottom: 24px;
-  padding: (8px * 1.5);
+  padding: (8px * 1.8);
   border: solid 1px #a9a9a9;
   border-radius: 4px;
   color: #292929;
@@ -39,5 +39,10 @@ export default {
     color: #fcfcfc;
     background-color: #292929;
   }
+}
+
+.card__title {
+  margin-bottom: 12px;
+  border-bottom: solid 1px #acb6e5;
 }
 </style>

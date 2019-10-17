@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h2>新着記事</h2>
+    <h2 class="content-title">New</h2>
     <ArticleCard :posts="posts"></ArticleCard>
   </div>
 </template>
@@ -38,7 +38,21 @@ export default {
     padding: 32px 64px;
   }
   @media screen and (min-width: 1264px) {
-    padding: 32px 128px;
+    padding: 32px 224px;
+  }
+}
+.content-title {
+  position: relative;
+  margin-bottom: 28px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 64px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #acb6e5;
   }
 }
 </style>

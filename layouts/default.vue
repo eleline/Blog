@@ -2,7 +2,7 @@
   <div>
     <header class="header">
       <nuxt-link to="/">
-        <h1 class="logo">Logo</h1>
+        <h1 class="logo">ELELINE</h1>
       </nuxt-link>
     </header>
     <div class="container">

@@ -6,24 +6,28 @@
   width: 100%;
   height: $header-h;
   padding: 8px $padding-p-h;
-  background-color: rgba(#fcfcfc, 0.6);
   border-bottom: solid 1px $gray_color;
-  backdrop-filter: blur(4px);
+  background-color: rgba(#fcfcfc, 0.8);
+  backdrop-filter: blur(8px);
   @include tablet {
     padding: 8px ($padding-p-h * 2);
   }
   @include raptop {
-    padding: 8px $padding-p-h 8px ($padding-p-h * 4);
+    padding: 8px $padding-p-h 8px ($padding-p-h * 7);
   }
   @include dark {
     background-color: rgba(#292929, 0.6);
   }
 }
 .logo {
-  color: $text_color;
   font-size: 1.8rem;
-  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.07em;
+  color: $text_color;
   @include dark {
-    color: #fcfcfc;
+    color: #acb6e5;
+    background: -webkit-linear-gradient(30deg, #acb6e5, #86fde8);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
