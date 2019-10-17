@@ -41,18 +41,4 @@ export default {
     padding: 32px 224px;
   }
 }
-.content-title {
-  position: relative;
-  margin-bottom: 28px;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 64px;
-    height: 4px;
-    border-radius: 2px;
-    background-color: #acb6e5;
-  }
-}
 </style>

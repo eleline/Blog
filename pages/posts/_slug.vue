@@ -1,7 +1,7 @@
 <template>
   <div class="full">
     <div class="main">
-      <h1 class="article-title">{{ currentTitle }}</h1>
+      <h1 class="content-title">{{ currentTitle }}</h1>
       <div v-if="loading">Loading</div>
       <div v-if="!loading" v-html="currentBody" />
     </div>
@@ -49,9 +49,6 @@ export default {
   display: flex;
   width: 100%;
   height: 100%;
-}
-.article-title {
-  margin-bottom: 24px;
 }
 pre {
   padding: 1.3rem;
