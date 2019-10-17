@@ -18,7 +18,6 @@ export default {
         }
       })
       .then(res => {
-        console.dir(JSON.parse(JSON.stringify(res.data)));
         return JSON.parse(JSON.stringify(res.data));
       })
       .catch(console.error);
