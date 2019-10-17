@@ -48,6 +48,12 @@ module.exports = {
     }
   },
   css: [{ src: "~/assets/scss/style.scss", lang: "scss" }],
+  modules: [["nuxt-webfontloader"]],
+  webfontloader: {
+    google: {
+      families: ["Quicksand"]
+    }
+  },
   env: {
     API_KEY: process.env.API_KEY,
     baseUrl: process.env.baseUrl

@@ -18,4 +18,7 @@
 .container {
   display: flex;
 }
+.logo {
+  font-weight: bold;
+}
 </style>

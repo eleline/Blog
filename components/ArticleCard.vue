@@ -32,7 +32,7 @@ export default {
   margin-bottom: 24px;
   padding: (8px * 1.5);
   border: solid 1px #a9a9a9;
-  border-radius: 10px;
+  border-radius: 4px;
   color: #292929;
   background-color: #fcfcfc;
   @media (prefers-color-scheme: dark) {
