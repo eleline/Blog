@@ -7,7 +7,7 @@
       :to="'posts/' + post.id"
     >
       <h3 class="card__title">{{ post.title }}</h3>
-      <p>{{ post.description }}</p>
+      <p class="card__body">{{ post.description }}</p>
     </nuxt-link>
   </div>
 </template>
@@ -35,14 +35,25 @@ export default {
   border-radius: 4px;
   color: #292929;
   background-color: #fcfcfc;
+  transition: 300ms ease-out;
+  overflow: hidden;
   @media (prefers-color-scheme: dark) {
     color: #fcfcfc;
     background-color: #292929;
+  }
+  &:hover {
+    background-color: #f0f0f0;
   }
 }
 
 .card__title {
   margin-bottom: 12px;
   border-bottom: solid 2px #acb6e5;
+}
+
+.card__body {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 </style>

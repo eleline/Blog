@@ -5,7 +5,7 @@
         <h1 class="logo">ELELINE</h1>
       </nuxt-link>
     </header>
-    <div class="container">
+    <div class="body">
       <nuxt />
     </div>
     <footer class="footer">
@@ -15,7 +15,7 @@
 </template>
 
 <style lang="scss">
-.container {
+.body {
   display: flex;
 }
 .logo {
