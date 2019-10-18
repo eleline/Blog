@@ -2,6 +2,7 @@
 Icon?
 package-lock.json
 yarn.lock
+sw.*
 
 # Logs
 logs

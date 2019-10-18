@@ -35,3 +35,10 @@ h3 {
 figcaption {
   font-size: $font-size-s2;
 }
+
+/* dark-theme img style */
+@include dark {
+  img {
+    filter: brightness(0.85);
+  }
+}

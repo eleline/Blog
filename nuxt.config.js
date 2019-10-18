@@ -48,7 +48,7 @@ module.exports = {
     }
   },
   css: [{ src: "~/assets/scss/style.scss", lang: "scss" }],
-  modules: [["nuxt-webfontloader"]],
+  modules: [["nuxt-webfontloader", "@nuxtjs/pwa"]],
   webfontloader: {
     google: {
       families: ["Quicksand"]
