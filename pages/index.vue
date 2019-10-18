@@ -35,7 +35,7 @@ export default {
 .main {
   width: 100%;
   @media screen and (min-width: 768px) {
-    padding: 32px 64px;
+    padding: 32px 128px;
   }
   @media screen and (min-width: 1264px) {
     padding: 32px 224px;

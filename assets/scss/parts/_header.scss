@@ -11,7 +11,7 @@
   backdrop-filter: blur(8px);
   z-index: 1;
   @include tablet {
-    padding: 8px ($padding-p-h * 2);
+    padding: 8px ($padding-p-h * 4);
   }
   @include raptop {
     padding: 8px $padding-p-h 8px ($padding-p-h * 7);

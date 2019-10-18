@@ -5,7 +5,7 @@
   padding: 32px $padding-p-h;
   background-color: #fcfcfc;
   @include tablet {
-    padding: 32px ($padding-p-h * 2);
+    padding: 32px ($padding-p-h * 4);
   }
   @include desktop {
     width: 65%;
