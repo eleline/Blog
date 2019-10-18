@@ -48,7 +48,7 @@ module.exports = {
     }
   },
   css: [{ src: "~/assets/scss/style.scss", lang: "scss" }],
-  modules: [["nuxt-webfontloader", "@nuxtjs/pwa"]],
+  modules: ["nuxt-webfontloader", "@nuxtjs/pwa"],
   manifest: {
     name: "eleline",
     lang: "ja",
