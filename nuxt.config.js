@@ -49,6 +49,20 @@ module.exports = {
   },
   css: [{ src: "~/assets/scss/style.scss", lang: "scss" }],
   modules: [["nuxt-webfontloader", "@nuxtjs/pwa"]],
+  manifest: {
+    name: "eleline",
+    lang: "ja",
+    short_name: "eleline",
+    title: "Nuxt * microCMS",
+    "og:title": "Nuxt * microCMS",
+    description: "Nuxt * microCMS",
+    "og:description": "Nuxt * microCMS",
+    theme_color: "#acb6e5",
+    background_color: "#fcfcfc"
+  },
+  workbox: {
+    dev: true
+  },
   webfontloader: {
     google: {
       families: ["Quicksand"]
