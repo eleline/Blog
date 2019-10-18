@@ -19,6 +19,6 @@
   display: flex;
 }
 .logo {
-  font-family: Quicksand;
+  font-weight: normal;
 }
 </style>
