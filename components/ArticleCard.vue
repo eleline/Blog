@@ -37,12 +37,15 @@ export default {
   background-color: #fcfcfc;
   transition: 300ms ease-out;
   overflow: hidden;
+  &:hover {
+    background-color: #f0f0f0;
+  }
   @media (prefers-color-scheme: dark) {
     color: #fcfcfc;
     background-color: #292929;
-  }
-  &:hover {
-    background-color: #f0f0f0;
+    &:hover {
+      background-color: #000;
+    }
   }
 }
 
