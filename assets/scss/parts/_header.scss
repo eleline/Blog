@@ -6,7 +6,6 @@
   width: 100%;
   height: $header-h;
   padding: 0 $padding-p-h;
-  align-items: center;
   border-bottom: solid 1px rgba($gray_color, 0.25);
   background-color: rgba(#fcfcfc, 0.7);
   backdrop-filter: blur(8px);
@@ -28,5 +27,8 @@
   color: $text_color;
   @include dark {
     color: #fcfcfc;
+  }
+  &__img {
+    height: 1.8rem;
   }
 }

@@ -1,8 +1,9 @@
 <template>
   <div>
     <header class="header">
-      <nuxt-link to="/">
-        <h1 class="logo">ELELINE</h1>
+      <nuxt-link to="/" class="flex">
+        <img class="logo__img" src="~/assets/img/eleline-logo.svg" alt="E" />
+        <h1 class="logo">LELINE</h1>
       </nuxt-link>
     </header>
     <div class="body">
@@ -20,5 +21,9 @@
 }
 .logo {
   font-weight: normal;
+}
+.flex {
+  display: flex;
+  align-items: center;
 }
 </style>
