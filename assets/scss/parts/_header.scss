@@ -26,9 +26,6 @@
   letter-spacing: 0.07em;
   color: $text_color;
   @include dark {
-    color: #acb6e5;
-    background: -webkit-linear-gradient(30deg, #acb6e5, #86fde8);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fcfcfc;
   }
 }
