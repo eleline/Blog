@@ -7,8 +7,8 @@
   height: $header-h;
   padding: 8px $padding-p-h;
   border-bottom: solid 1px $gray_color;
-  background-color: rgba(#fcfcfc, 0.8);
-  backdrop-filter: blur(8px);
+  background-color: rgba(#fcfcfc, 0.7);
+  backdrop-filter: blur(6px);
   z-index: 1;
   @include tablet {
     padding: 8px ($padding-p-h * 4);
@@ -21,7 +21,7 @@
   }
 }
 .logo {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   letter-spacing: 0.07em;
   color: $text_color;

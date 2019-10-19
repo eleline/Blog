@@ -10,7 +10,7 @@ module.exports = {
     htmlAttrs: {
       lang: "ja"
     },
-    title: "connect",
+    title: "ELELINE",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -48,7 +48,7 @@ module.exports = {
     }
   },
   css: [{ src: "~/assets/scss/style.scss", lang: "scss" }],
-  modules: ["nuxt-webfontloader", "@nuxtjs/pwa"],
+  modules: ["nuxt-webfontloader", "@nuxtjs/pwa", "@nuxtjs/axios"],
   manifest: {
     name: "eleline",
     lang: "ja",

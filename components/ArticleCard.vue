@@ -22,7 +22,7 @@ export default {
 .card-index {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card {
@@ -46,6 +46,9 @@ export default {
     &:hover {
       background-color: #000;
     }
+  }
+  @media screen and (min-width: 1264px) {
+    flex-basis: 48%;
   }
 }
 

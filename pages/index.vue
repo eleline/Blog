@@ -5,32 +5,6 @@
   </div>
 </template>
 
-<script>
-import axios from "axios";
-
-import ArticleCard from "../components/ArticleCard";
-
-export default {
-  async asyncData({ env }) {
-    const data = await axios
-      .get(`${env.baseUrl}/blog`, {
-        headers: {
-          "X-API-KEY": env.API_KEY
-        }
-      })
-      .then(res => {
-        return JSON.parse(JSON.stringify(res.data));
-      })
-      .catch(console.error);
-
-    return { posts: data };
-  },
-  components: {
-    ArticleCard
-  }
-};
-</script>
-
 <style lang="scss" scoped>
 .main {
   width: 100%;
@@ -42,3 +16,22 @@ export default {
   }
 }
 </style>
+
+<script>
+import ArticleCard from "../components/ArticleCard";
+
+export default {
+  async asyncData({ env, $axios }) {
+    const data = await $axios.$get(`${env.baseUrl}/blog`, {
+      headers: {
+        "X-API-KEY": env.API_KEY
+      }
+    });
+
+    return { posts: data };
+  },
+  components: {
+    ArticleCard
+  }
+};
+</script>

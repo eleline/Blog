@@ -10,8 +10,6 @@
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   data() {
     return {
@@ -20,20 +18,15 @@ export default {
       currentTitle: ""
     };
   },
-  async asyncData({ env, route }) {
+  async asyncData({ env, route, $axios }) {
     const dir = route.path.split("/");
     const postId = dir[dir.length - 1];
 
-    const data = await axios
-      .get(`${env.baseUrl}/blog/${postId}`, {
-        headers: {
-          "X-API-KEY": env.API_KEY
-        }
-      })
-      .then(res => {
-        return res.data;
-      })
-      .catch(console.error);
+    const data = await $axios.$get(`${env.baseUrl}/blog/${postId}`, {
+      headers: {
+        "X-API-KEY": env.API_KEY
+      }
+    });
 
     return {
       loading: false,
