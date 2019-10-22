@@ -47,7 +47,7 @@ export default {
       background-color: #000;
     }
   }
-  @media screen and (min-width: 1264px) {
+  @media screen and (min-width: 1024px) {
     flex-basis: 48%;
   }
 }
