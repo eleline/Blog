@@ -10,4 +10,7 @@
 }
 .copyright {
   color: #fcfcfc;
+  @include dark {
+    color: darken(#fcfcfc, 10%);
+  }
 }

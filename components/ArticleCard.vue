@@ -41,7 +41,7 @@ export default {
     background-color: #f0f0f0;
   }
   @media (prefers-color-scheme: dark) {
-    color: #fcfcfc;
+    color: darken(#fcfcfc, 10%);
     background-color: #292929;
     &:hover {
       background-color: #333;
