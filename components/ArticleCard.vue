@@ -44,7 +44,7 @@ export default {
     color: #fcfcfc;
     background-color: #292929;
     &:hover {
-      background-color: #000;
+      background-color: #333;
     }
   }
   @media screen and (min-width: 1024px) {
