@@ -34,11 +34,11 @@ export default {
   border: solid 1px #a9a9a9;
   border-radius: 4px;
   color: #292929;
-  background-color: #fcfcfc;
+  background-color: #f0f0f0;
   transition: box-shadow 300ms ease-out;
   overflow: hidden;
   &:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.125);
   }
   @media (prefers-color-scheme: dark) {
     color: darken(#fcfcfc, 10%);
