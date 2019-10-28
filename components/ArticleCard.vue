@@ -35,16 +35,16 @@ export default {
   border-radius: 4px;
   color: #292929;
   background-color: #fcfcfc;
-  transition: 300ms ease-out;
+  transition: box-shadow 300ms ease-out;
   overflow: hidden;
   &:hover {
-    background-color: #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
   @media (prefers-color-scheme: dark) {
     color: darken(#fcfcfc, 10%);
     background-color: #292929;
     &:hover {
-      background-color: #333;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
   }
   @media screen and (min-width: 1024px) {
