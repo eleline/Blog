@@ -3,7 +3,7 @@
     <div class="main">
       <h1 class="content-title">{{ currentTitle }}</h1>
       <div v-if="loading">Loading</div>
-      <div v-if="!loading" v-html="currentBody" />
+      <div v-if="!loading" v-html="$md.render(currentBody)" />
     </div>
     <div class="side">サイド</div>
   </div>
