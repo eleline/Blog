@@ -48,6 +48,7 @@ module.exports = {
     }
   },
   css: [{ src: "~/assets/scss/style.scss", lang: "scss" }],
+  plugins: ["~/plugins/prism"],
   modules: [
     "nuxt-webfontloader",
     "@nuxtjs/pwa",

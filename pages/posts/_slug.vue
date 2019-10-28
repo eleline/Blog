@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import Prism from "~/plugins/prism";
+
 export default {
   data() {
     return {
@@ -17,6 +19,9 @@ export default {
       currentBody: "",
       currentTitle: ""
     };
+  },
+  mounted() {
+    Prism.highlightAll();
   },
   async asyncData({ env, route, $axios }) {
     const dir = route.path.split("/");
