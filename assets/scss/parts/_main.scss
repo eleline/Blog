@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 100vh;
   padding: 32px $padding-p-h;
-  background-color: #fcfcfc;
+  background-color: $background-color;
   @include tablet {
     padding: 32px ($padding-p-h * 4);
   }

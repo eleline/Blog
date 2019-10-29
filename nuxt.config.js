@@ -48,7 +48,27 @@ module.exports = {
     }
   },
   css: [{ src: "~/assets/scss/style.scss", lang: "scss" }],
-  modules: ["nuxt-webfontloader", "@nuxtjs/pwa", "@nuxtjs/axios"],
+  plugins: ["~/plugins/prism"],
+  modules: [
+    "nuxt-webfontloader",
+    "@nuxtjs/pwa",
+    "@nuxtjs/axios",
+    "@nuxtjs/markdownit"
+  ],
+  markdownit: {
+    preset: "default",
+    injected: true,
+    breaks: true,
+    html: true,
+    linkify: true,
+    typography: true,
+    xhtmlOut: true,
+    langPrefix: "language-",
+    quotes: "“”‘’",
+    highlight: function(/*str, lang*/) {
+      return "";
+    }
+  },
   manifest: {
     name: "eleline",
     lang: "ja",

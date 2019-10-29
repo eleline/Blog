@@ -34,17 +34,17 @@ export default {
   border: solid 1px #a9a9a9;
   border-radius: 4px;
   color: #292929;
-  background-color: #fcfcfc;
-  transition: 300ms ease-out;
+  background-color: #f0f0f0;
+  transition: box-shadow 300ms ease-out;
   overflow: hidden;
   &:hover {
-    background-color: #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.125);
   }
   @media (prefers-color-scheme: dark) {
-    color: #fcfcfc;
+    color: darken(#fcfcfc, 10%);
     background-color: #292929;
     &:hover {
-      background-color: #000;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
   }
   @media screen and (min-width: 1024px) {
