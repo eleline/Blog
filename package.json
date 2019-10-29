@@ -1,7 +1,7 @@
 {
   "name": "connect",
   "version": "1.0.0",
-  "description": "eleline blog",
+  "description": "eleline JAMStack blog",
   "author": "eleline <ggggepicstar@gmail.com>",
   "private": true,
   "scripts": {
