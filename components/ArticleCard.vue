@@ -41,7 +41,7 @@ export default {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.165);
   @media (hover: hover) {
     &:hover {
-      box-shadow: 0 0 8px rgba(#8a2be2, 0.315);
+      box-shadow: 0 7px 18px rgba(#8a2be2, 0.315);
       transform: translateY(-4px);
     }
   }
@@ -59,10 +59,14 @@ export default {
   }
 
   &__body {
+    color: rgba(#292929, 0.72);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
+    @media (prefers-color-scheme: dark) {
+      color: darken(#fcfcfc, 0.72);
+    }
   }
 }
 </style>
