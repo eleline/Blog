@@ -3,7 +3,7 @@
     <div class="main">
       <h1 class="content-title">{{ currentTitle }}</h1>
       <div v-if="loading">Loading</div>
-      <article v-else v-html="$md.render(currentBody)"></article>
+      <article class="rich-text" v-else v-html="$md.render(currentBody)"></article>
     </div>
     <div class="side">サイド</div>
   </div>
@@ -47,15 +47,5 @@ export default {
   display: flex;
   width: 100%;
   height: 100%;
-}
-pre {
-  padding: 1.3rem;
-  color: #fcfcfc;
-  background-color: #23241f;
-  border-radius: calc(1rem / 2.4);
-  overflow-x: auto;
-  @media (prefers-color-scheme: dark) {
-    background-color: #333;
-  }
 }
 </style>

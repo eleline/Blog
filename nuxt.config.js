@@ -89,6 +89,9 @@ module.exports = {
       families: ["Quicksand"]
     }
   },
+  tailwindcss: {
+    configPath: "~/config/tailwind.config.js"
+  },
   env: {
     API_KEY: process.env.API_KEY,
     baseUrl: process.env.baseUrl
