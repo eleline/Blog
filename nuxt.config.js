@@ -47,10 +47,7 @@ module.exports = {
       }
     }
   },
-  css: [
-    { src: "~/assets/scss/style.scss", lang: "scss" },
-    { src: "~/assets/css/prism-a11y-dark.css", lang: "css" }
-  ],
+  css: [{ src: "~/assets/scss/style.scss", lang: "scss" }],
   plugins: ["~/plugins/prism"],
   modules: [
     "nuxt-webfontloader",
