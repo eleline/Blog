@@ -38,6 +38,7 @@ export default {
   background-color: #f2f2f2;
   transition: all 300ms ease-out;
   overflow: hidden;
+  text-decoration: none;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.165);
   @media (hover: hover) {
     &:hover {

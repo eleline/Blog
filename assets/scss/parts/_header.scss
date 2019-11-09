@@ -25,6 +25,7 @@
   font-weight: bold;
   letter-spacing: 0.07em;
   color: $text_color;
+  text-decoration: none;
   @include dark {
     color: #fcfcfc;
   }
