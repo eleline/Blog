@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="header">
-      <nuxt-link to="/" class="flex">
+      <nuxt-link to="/" class="flex no-underline">
         <img class="logo__img" src="~/assets/img/eleline-logo.svg" alt="E" />
         <h1 class="logo">LELINE</h1>
       </nuxt-link>

@@ -1,7 +1,7 @@
 <template>
   <div class="card-index">
     <nuxt-link
-      class="card"
+      class="card no-underline"
       v-for="(post, index) in posts.contents"
       :key="index"
       :to="'posts/' + post.id"
@@ -38,7 +38,6 @@ export default {
   background-color: #f2f2f2;
   transition: all 300ms ease-out;
   overflow: hidden;
-  text-decoration: none;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.165);
   @media (hover: hover) {
     &:hover {
