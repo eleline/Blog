@@ -49,15 +49,16 @@ export default {
   height: 100%;
 }
 
+pre {
+  color: #ccc;
+  background-color: #2d2d2d;
+}
+
 .rich-text {
   pre {
     padding: 1.3rem;
     border-radius: calc(1rem / 2.4);
     overflow-x: auto;
-    margin-left: calc(-1rem / 2.4);
-    @media (prefers-color-scheme: dark) {
-      background-color: #333;
-    }
   }
 }
 </style>
