@@ -48,7 +48,7 @@ export default {
 
   @media (prefers-color-scheme: dark) {
     color: darken(#fcfcfc, 10%);
-    background-color: #292929;
+    background-color: #333;
   }
   @media screen and (min-width: 1024px) {
     flex-basis: 48%;
