@@ -47,7 +47,10 @@ module.exports = {
       }
     }
   },
-  css: [{ src: "~/assets/scss/style.scss", lang: "scss" }],
+  css: [
+    { src: "~/assets/scss/style.scss", lang: "scss" },
+    { src: "~/assets/css/prism-a11y-dark.css", lang: "css" }
+  ],
   plugins: ["~/plugins/prism"],
   modules: [
     "nuxt-webfontloader",
@@ -90,7 +93,8 @@ module.exports = {
     }
   },
   tailwindcss: {
-    configPath: "~/config/tailwind.config.js"
+    configPath: "~/config/tailwind.config.js",
+    cssPath: "~/assets/css/tailwind.css"
   },
   env: {
     API_KEY: process.env.API_KEY,
