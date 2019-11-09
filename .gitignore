@@ -1,7 +1,6 @@
 .DS_Store
 Icon?
 package-lock.json
-yarn.lock
 sw.*
 
 # Logs
