@@ -53,7 +53,8 @@ module.exports = {
     "nuxt-webfontloader",
     "@nuxtjs/pwa",
     "@nuxtjs/axios",
-    "@nuxtjs/markdownit"
+    "@nuxtjs/markdownit",
+    "@nuxtjs/tailwindcss"
   ],
   markdownit: {
     preset: "default",

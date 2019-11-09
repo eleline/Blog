@@ -34,7 +34,7 @@ export default {
   border: solid 1px #a9a9a9;
   border-radius: 4px;
   color: #292929;
-  background-color: #f0f0f0;
+  background-color: #f2f2f2;
   transition: box-shadow 300ms ease-out;
   overflow: hidden;
   &:hover {
