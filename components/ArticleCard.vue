@@ -29,38 +29,40 @@ export default {
   display: block;
   flex-basis: 100%;
   height: auto;
-  margin-bottom: 24px;
-  padding: (8px * 1.8);
-  border: solid 1px #a9a9a9;
-  border-radius: 4px;
+  margin-bottom: 32px;
+  padding: (16px);
+  border-bottom: solid 2px #8a2be2;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   color: #292929;
   background-color: #f2f2f2;
-  transition: box-shadow 300ms ease-out;
+  transition: all 300ms ease-out;
   overflow: hidden;
-  &:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.165);
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0 8px rgba(#8a2be2, 0.315);
+      transform: translateY(-4px);
+    }
   }
+
   @media (prefers-color-scheme: dark) {
     color: darken(#fcfcfc, 10%);
     background-color: #292929;
-    &:hover {
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
   }
   @media screen and (min-width: 1024px) {
     flex-basis: 48%;
   }
-}
 
-.card__title {
-  margin-bottom: 12px;
-  border-bottom: solid 2px #acb6e5;
-}
+  &__title {
+    margin-bottom: 16px;
+  }
 
-.card__body {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
+  &__body {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
 }
 </style>

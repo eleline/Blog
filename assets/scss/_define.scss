@@ -1,5 +1,5 @@
 /*** colors ***/
-$primary-color: #acb6e5;
+$primary-color: #8a2be2;
 $secondary-color: #111111;
 $text-color: #292929;
 $background-color: #f2f2f2;
@@ -39,6 +39,14 @@ $font-size-s4: 0.68rem;
     @content;
   }
 }
+
+/*** hover ***/
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
 /* header height */
 $header-h: 56px;
 

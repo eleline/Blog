@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h2 class="content-title">New</h2>
+    <h2 class="contents-title">New</h2>
     <ArticleCard :posts="posts"></ArticleCard>
   </div>
 </template>

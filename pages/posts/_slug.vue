@@ -1,7 +1,7 @@
 <template>
   <div class="full">
     <div class="main">
-      <h1 class="content-title">{{ currentTitle }}</h1>
+      <h1 class="contents-title">{{ currentTitle }}</h1>
       <div v-if="loading">Loading</div>
       <article class="rich-text" v-else v-html="$md.render(currentBody)"></article>
     </div>
@@ -47,5 +47,19 @@ export default {
   display: flex;
   width: 100%;
   height: 100%;
+}
+
+.rich-text {
+  pre {
+    padding: 1.3rem;
+    color: #fcfcfc;
+    background-color: #23241f;
+    border-radius: calc(1rem / 2.4);
+    overflow-x: auto;
+    margin-left: calc(-1rem / 2.4);
+    @media (prefers-color-scheme: dark) {
+      background-color: #333;
+    }
+  }
 }
 </style>

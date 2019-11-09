@@ -1,6 +1,6 @@
-.content-title {
+.contents-title {
   position: relative;
-  margin-bottom: 48px;
+  margin-bottom: 36px;
   &::after {
     content: "";
     position: absolute;
@@ -9,18 +9,6 @@
     width: 64px;
     height: 4px;
     border-radius: 2px;
-    background-color: #acb6e5;
-  }
-}
-
-.rich-text pre {
-  padding: 1.3rem;
-  color: #fcfcfc;
-  background-color: #23241f;
-  border-radius: calc(1rem / 2.4);
-  overflow-x: auto;
-  margin-left: calc(-1rem / 2.4);
-  @media (prefers-color-scheme: dark) {
-    background-color: #333;
+    background-color: #8a2be2;
   }
 }

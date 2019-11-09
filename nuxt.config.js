@@ -21,7 +21,7 @@ module.exports = {
   /*
    ** Customize the progress bar color
    */
-  loading: { color: "#acb6e5" },
+  loading: { color: "#8a2be2" },
   /*
    ** Build configuration
    */
@@ -78,7 +78,7 @@ module.exports = {
     "og:title": "Nuxt * microCMS",
     description: "Nuxt * microCMS",
     "og:description": "Nuxt * microCMS",
-    theme_color: "#acb6e5",
+    theme_color: "#8a2be2",
     background_color: "#fcfcfc"
   },
   workbox: {
