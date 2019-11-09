@@ -50,6 +50,7 @@ export default {
     color: darken(#fcfcfc, 10%);
     background-color: #333;
   }
+
   @media screen and (min-width: 1024px) {
     flex-basis: 48%;
   }
@@ -65,7 +66,7 @@ export default {
     -webkit-line-clamp: 3;
     overflow: hidden;
     @media (prefers-color-scheme: dark) {
-      color: darken(#fcfcfc, 0.72);
+      color: rgba(#fcfcfc, 0.72);
     }
   }
 }
