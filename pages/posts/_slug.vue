@@ -207,6 +207,12 @@ pre {
 }
 
 .rich-text {
+  h2,
+  h3,
+  h4 {
+    margin-top: 2em;
+  }
+
   h2 {
     position: relative;
     margin-bottom: 1em;
@@ -226,13 +232,13 @@ pre {
 
   h3 {
     position: relative;
-    margin-bottom: calc(1em + 7px);
+    margin-bottom: calc(1em + 12px);
 
     &::before,
     &::after {
       content: "";
       position: absolute;
-      bottom: -4px;
+      bottom: -9px;
       height: 3px;
     }
 

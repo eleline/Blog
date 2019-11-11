@@ -1,8 +1,5 @@
 .header {
   display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: $header-h;
   padding: 0 $padding-p-h;
@@ -20,6 +17,7 @@
     background-color: rgba(#292929, 0.6);
   }
 }
+
 .logo {
   font-size: 1.4rem;
   font-weight: bold;
