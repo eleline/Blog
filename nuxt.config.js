@@ -86,7 +86,7 @@ module.exports = {
   },
   webfontloader: {
     google: {
-      families: ["Quicksand"]
+      families: ["Quicksand:400,500,600"]
     }
   },
   tailwindcss: {

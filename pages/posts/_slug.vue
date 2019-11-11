@@ -214,12 +214,37 @@ pre {
       content: "#";
       position: absolute;
       top: 0;
+      bottom: 0;
       left: 0;
       color: #8a2be2;
       font-weight: bold;
       font-size: 1.2em;
-      margin-left: -1em;
-      transform: translateY(-10%);
+      margin-left: -0.85em;
+      transform: translateY(-12%);
+    }
+  }
+
+  h3 {
+    position: relative;
+    margin-bottom: calc(1em + 7px);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      height: 3px;
+    }
+
+    &::before {
+      width: 100%;
+      background-color: lighten(#8a2be2, 30%);
+    }
+
+    &::after {
+      left: 0;
+      width: 18%;
+      background-color: #8a2be2;
     }
   }
 
@@ -234,16 +259,17 @@ pre {
   }
 
   pre {
-    font-size: 0.9em;
-    padding: 1.3rem;
+    font-size: 0.8em;
+    padding: 1.3rem 32px;
     margin-top: 1.8em;
     margin-left: -32px;
     margin-right: -32px;
     border-radius: 0;
     overflow-x: auto;
     @media screen and (min-width: 768px) {
-      margin-left: -0.6em;
-      margin-right: -0.6em;
+      margin-left: -1.2em;
+      margin-right: -1.2em;
+      padding: 1.3em 1.2em;
       border-radius: 0.6em;
     }
   }
@@ -256,13 +282,13 @@ pre {
     }
 
     code {
-      background-color: rgba(#000, 0.185);
+      background-color: rgba(#000, 0.085);
       font-size: 0.72em;
       margin: 0 4px;
-      padding: 0.3em;
-      border-radius: 0.3em;
+      padding: 0.4em;
+      border-radius: 0.2em;
       @media (prefers-color-scheme: dark) {
-        background-color: rgba(#fff, 0.185);
+        background-color: rgba(#fff, 0.115);
       }
     }
   }
@@ -270,10 +296,13 @@ pre {
   hr {
     display: block;
     height: 2px;
-    background-color: #af7cdf;
+    background-color: rgba(#000, 0.185);
     margin: 3em 5em;
     border: none;
     border-radius: 2px;
+    @media (prefers-color-scheme: dark) {
+      background-color: rgba(#fff, 0.185);
+    }
   }
 }
 </style>
