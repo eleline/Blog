@@ -22,7 +22,7 @@ import ArticleCard from "../components/ArticleCard";
 
 export default {
   async asyncData({ env, $axios }) {
-    const data = await $axios.$get(`${env.baseUrl}/blog`, {
+    const data = await $axios.$get(`${env.baseUrl}/blog?limit=10`, {
       headers: {
         "X-API-KEY": env.API_KEY
       }
