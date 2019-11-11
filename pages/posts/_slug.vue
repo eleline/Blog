@@ -234,7 +234,7 @@ pre {
   }
 
   pre {
-    font-size: 0.81em;
+    font-size: 0.9em;
     padding: 1.3rem;
     margin-top: 1.8em;
     margin-left: -32px;
