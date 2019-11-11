@@ -1,17 +1,13 @@
 html {
-  font-family: Quicksand, -apple-system, BlinkMacSystemFont, "Hiragino Sans",
-    "ヒラギノ角ゴシック", Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
-    Noto Color Emoji;
+  font-family: Quicksand, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "ヒラギノ角ゴシック", Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 body {
   color: $text-color;
   background-color: #ffffff;
   padding-top: $header-h;
-  font-family: Quicksand, -apple-system, BlinkMacSystemFont, "Hiragino Sans",
-    "ヒラギノ角ゴシック", Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
-    Noto Color Emoji;
+  font-family: Quicksand, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "ヒラギノ角ゴシック", Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   text-align: justify;
   @include dark {
     color: darken(#fcfcfc, 10%);

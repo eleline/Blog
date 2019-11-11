@@ -48,20 +48,6 @@ export default {
   width: 100%;
   height: 100%;
 }
-
-pre {
-  color: #ccc;
-  background-color: #2d2d2d;
-}
-
-.rich-text {
-  pre {
-    padding: 1.3rem;
-    border-radius: calc(1rem / 2.4);
-    overflow-x: auto;
-  }
-}
-
 /**
  * a11y-dark theme for JavaScript, CSS, and HTML
  * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
@@ -212,6 +198,44 @@ pre[class*="language-"] {
   .token.attr-value,
   .token.url {
     font-weight: normal;
+  }
+}
+
+pre {
+  color: #ccc;
+  background-color: #2d2d2d;
+}
+
+.rich-text {
+  h2 {
+    position: relative;
+    margin-bottom: 1em;
+    &::before {
+      content: "#";
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #8a2be2;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-left: -0.8em;
+      transform: translateY(-10%);
+    }
+  }
+
+  pre {
+    font-size: 0.81em;
+    padding: 1.3rem;
+    margin-top: 1.8em;
+    margin-left: -32px;
+    margin-right: -32px;
+    border-radius: 0;
+    overflow-x: auto;
+    @media screen and (min-width: 768px) {
+      margin-left: -0.6em;
+      margin-right: -0.6em;
+      border-radius: 0.6em;
+    }
   }
 }
 </style>
