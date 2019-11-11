@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h2 class="contents-title">New</h2>
+    <h2 class="contents-title font-bold">新着記事</h2>
     <ArticleCard :posts="posts"></ArticleCard>
   </div>
 </template>

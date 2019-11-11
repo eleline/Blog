@@ -60,13 +60,13 @@ export default {
   }
 
   &__body {
-    color: rgba(#292929, 0.72);
+    color: rgba(#292929, 0.64);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
     @media (prefers-color-scheme: dark) {
-      color: rgba(#fcfcfc, 0.72);
+      color: rgba(#fcfcfc, 0.64);
     }
   }
 }

@@ -226,10 +226,10 @@ pre {
   ul {
     list-style: inside;
     padding: 1.4em;
-    border: solid 1px rgba(#000, 0.24);
+    border: solid 1px rgba(#000, 0.185);
     border-radius: 0.3em;
     @media (prefers-color-scheme: dark) {
-      border: solid 1px rgba(#fff, 0.24);
+      border: solid 1px rgba(#fff, 0.185);
     }
   }
 
@@ -245,6 +245,25 @@ pre {
       margin-left: -0.6em;
       margin-right: -0.6em;
       border-radius: 0.6em;
+    }
+  }
+
+  p {
+    strong {
+      font-size: 1.1em;
+      margin: 0 4px;
+      border-bottom: solid 2px #8a2be2;
+    }
+
+    code {
+      background-color: rgba(#000, 0.185);
+      font-size: 0.72em;
+      margin: 0 4px;
+      padding: 0.3em;
+      border-radius: 0.3em;
+      @media (prefers-color-scheme: dark) {
+        background-color: rgba(#fff, 0.185);
+      }
     }
   }
 
