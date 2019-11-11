@@ -218,8 +218,18 @@ pre {
       color: #8a2be2;
       font-weight: bold;
       font-size: 1.2em;
-      margin-left: -0.8em;
+      margin-left: -1em;
       transform: translateY(-10%);
+    }
+  }
+
+  ul {
+    list-style: inside;
+    padding: 1.4em;
+    border: solid 1px rgba(#000, 0.24);
+    border-radius: 0.3em;
+    @media (prefers-color-scheme: dark) {
+      border: solid 1px rgba(#fff, 0.24);
     }
   }
 
@@ -236,6 +246,15 @@ pre {
       margin-right: -0.6em;
       border-radius: 0.6em;
     }
+  }
+
+  hr {
+    display: block;
+    height: 2px;
+    background-color: #af7cdf;
+    margin: 3em 5em;
+    border: none;
+    border-radius: 2px;
   }
 }
 </style>
