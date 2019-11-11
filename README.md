@@ -7,7 +7,7 @@ JAMStack ブログテンプレート
 ## Use
 
 - Nuxt
-- Netfily
+- Netlify
 - microCMS
 
 ## Build Setup
