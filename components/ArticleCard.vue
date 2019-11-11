@@ -38,7 +38,7 @@ export default {
   background-color: #f2f2f2;
   transition: all 300ms ease-out;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.165);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.215);
   @media (hover: hover) {
     &:hover {
       box-shadow: 0 7px 18px rgba(#8a2be2, 0.315);
