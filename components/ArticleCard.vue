@@ -20,16 +20,19 @@ export default {
 
 <style lang="scss">
 .card-index {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  --column-count: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), 1fr);
+  @media screen and (min-width: 1024px) {
+    --column-count: 2;
+  }
+  @media screen and (min-width: 1220px) {
+    --column-count: 3;
+  }
 }
 
 .card {
   display: block;
-  flex-basis: 100%;
-  height: auto;
-  margin-bottom: 32px;
   padding: (16px);
   border-bottom: solid 2px #8a2be2;
   border-top-left-radius: 8px;
@@ -49,10 +52,6 @@ export default {
   @media (prefers-color-scheme: dark) {
     color: darken(#fcfcfc, 10%);
     background-color: #333;
-  }
-
-  @media screen and (min-width: 1024px) {
-    flex-basis: 48%;
   }
 
   &__title {
