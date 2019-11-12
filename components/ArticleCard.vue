@@ -23,17 +23,18 @@ export default {
   --column-count: 1;
   display: grid;
   grid-template-columns: repeat(var(--column-count), 1fr);
+  grid-gap: 32px;
   @media screen and (min-width: 1024px) {
     --column-count: 2;
   }
-  @media screen and (min-width: 1220px) {
+  @media screen and (min-width: 1580px) {
     --column-count: 3;
   }
 }
 
 .card {
   display: block;
-  padding: (16px);
+  padding: 16px;
   border-bottom: solid 2px #8a2be2;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
