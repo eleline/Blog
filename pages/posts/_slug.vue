@@ -265,7 +265,7 @@ pre {
   }
 
   pre {
-    font-size: 0.8em;
+    font-size: 0.95em;
     padding: 1.3rem 32px;
     margin-top: 1.8em;
     margin-left: -32px;
