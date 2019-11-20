@@ -203,7 +203,10 @@ pre[class*="language-"] {
 
 pre {
   color: #ccc;
-  background-color: #2d2d2d;
+  background-color: #2d2d2d !important;
+  @media (prefers-color-scheme: dark) {
+    background-color: #393939 !important;
+  }
 }
 
 .rich-text {
