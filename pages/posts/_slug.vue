@@ -251,8 +251,8 @@ pre {
     &::after {
       content: "";
       position: absolute;
-      bottom: -4px;
-      height: 3px;
+      bottom: -6px;
+      height: 2px;
     }
 
     &::before {

@@ -62,7 +62,6 @@ export default {
 
   &__body {
     color: rgba(#292929, 0.78);
-    font-size: 0.88em;
     line-height: 1.6;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
