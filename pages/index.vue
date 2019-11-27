@@ -21,13 +21,18 @@
 import ArticleCard from "../components/ArticleCard";
 
 export default {
+  head() {
+    return {
+      titleTemplate: null,
+      title: "ELELINE"
+    };
+  },
   async asyncData({ env, $axios }) {
     const data = await $axios.$get(`${env.baseApiUrl}/blog?limit=10`, {
       headers: {
         "X-API-KEY": env.API_KEY
       }
     });
-
     return { posts: data };
   },
   components: {

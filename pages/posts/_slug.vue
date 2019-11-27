@@ -11,8 +11,10 @@
 
 <script>
 import Prism from "~/plugins/prism";
+import Meta from "~/assets/mixins/meta";
 
 export default {
+  mixins: [Meta],
   data() {
     return {
       loading: true,
@@ -36,7 +38,14 @@ export default {
     return {
       loading: false,
       currentBody: data.body,
-      currentTitle: data.title
+      currentTitle: data.title,
+      meta: {
+        title: data.title,
+        description: data.description,
+        type: "article",
+        url: `https://eleline.site/${postId}`,
+        image: "https://example.com/img/ogp/common.jpg"
+      }
     };
   }
 };
