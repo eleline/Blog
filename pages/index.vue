@@ -15,6 +15,10 @@
     padding: 32px 224px;
   }
 }
+
+.content-title {
+  font-size: 1.42rem;
+}
 </style>
 
 <script>
