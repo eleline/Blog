@@ -57,6 +57,7 @@ export default {
 
   &__title {
     margin-bottom: 16px;
+    font-weight: 600;
   }
 
   &__body {
