@@ -244,13 +244,13 @@ pre {
 
   h3 {
     position: relative;
-    margin-bottom: calc(1em + 12px);
+    margin-bottom: calc(1em + 7px);
 
     &::before,
     &::after {
       content: "";
       position: absolute;
-      bottom: -9px;
+      bottom: -4px;
       height: 3px;
     }
 
