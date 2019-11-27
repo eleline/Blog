@@ -44,7 +44,7 @@ export default {
         description: data.description,
         type: "article",
         url: `https://eleline.site/${postId}`,
-        image: "https://example.com/img/ogp/common.jpg"
+        image: "https://example.com/img/ogp/common.png"
       }
     };
   }
