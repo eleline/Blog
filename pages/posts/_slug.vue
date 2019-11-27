@@ -43,7 +43,7 @@ export default {
         title: data.title,
         description: data.description,
         type: "article",
-        url: `https://eleline.site/${postId}`,
+        url: `https://eleline.site/${postId}/`,
         image: "https://example.com/img/ogp/common.png"
       }
     };
