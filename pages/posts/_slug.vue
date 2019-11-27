@@ -228,12 +228,12 @@ pre {
   h2 {
     position: relative;
     margin-bottom: 1em;
+    line-height: 1.46;
     &::before {
       content: "#";
       position: absolute;
       top: 0;
-      bottom: 0;
-      left: 0;
+      margin: auto;
       color: #8a2be2;
       font-weight: bold;
       font-size: 1.2em;
@@ -245,6 +245,7 @@ pre {
   h3 {
     position: relative;
     margin-bottom: calc(1em + 7px);
+    line-height: 1.5;
 
     &::before,
     &::after {
@@ -277,7 +278,7 @@ pre {
   }
 
   pre {
-    font-size: 0.95em;
+    font-size: 0.78em;
     padding: 1.3rem 32px;
     margin-top: 1.8em;
     margin-left: -32px;

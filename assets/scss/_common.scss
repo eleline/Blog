@@ -3,6 +3,9 @@ html {
     "ヒラギノ角ゴシック", Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
     Noto Color Emoji;
+  font-kerning: none;
+  overflow-wrap: break-word;
+  line-height: 1.75;
 }
 
 body {
@@ -33,6 +36,7 @@ h4,
 h5,
 h6 {
   font-weight: 600;
+  font-kerning: auto;
 }
 
 strong {
