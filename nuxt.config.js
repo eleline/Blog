@@ -1,6 +1,13 @@
 const axios = require("axios");
 require("dotenv").config();
-const { API_KEY, baseUrl } = process.env;
+const {
+  API_KEY,
+  baseApiUrl,
+  baseUrl,
+  baseName,
+  baseDesc,
+  baseOgp
+} = process.env;
 
 module.exports = {
   /*
@@ -8,13 +15,26 @@ module.exports = {
    */
   head: {
     htmlAttrs: {
-      lang: "ja"
+      lang: "ja",
+      prefix: "og: http://ogp.me/ns#"
     },
     title: "ELELINE",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "eleline blog" }
+      { hid: "og:site_name", property: "og:site_name", content: baseName },
+      { hid: "description", name: "description", content: baseDesc },
+      { hid: "og:type", property: "og:type", content: "article" },
+      { hid: "og:url", property: "og:url", content: baseUrl },
+      { hid: "og:title", property: "og:title", content: baseName },
+      { hid: "og:description", property: "og:description", content: baseDesc },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: `${baseOgp}/common.png`
+      },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@eleline5" }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
@@ -95,12 +115,16 @@ module.exports = {
   },
   env: {
     API_KEY: process.env.API_KEY,
-    baseUrl: process.env.baseUrl
+    baseApiUrl: process.env.baseApiUrl,
+    baseName: baseName,
+    baseDesc: baseDesc,
+    baseUrl: baseUrl,
+    baseOgp: baseOgp
   },
   generate: {
     routes() {
       return axios
-        .get(`${process.env.baseUrl}/blog`, {
+        .get(`${process.env.baseApiUrl}/blog`, {
           headers: {
             "X-API-KEY": process.env.API_KEY
           }
