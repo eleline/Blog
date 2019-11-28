@@ -237,6 +237,7 @@ pre {
       color: #8a2be2;
       font-weight: bold;
       font-size: 1.2em;
+      font-family: Quicksand;
       margin-left: -0.85em;
       transform: translateY(-12%);
     }
@@ -278,7 +279,7 @@ pre {
   }
 
   pre {
-    font-size: 0.78em;
+    font-size: 0.9em;
     padding: 1.3rem 32px;
     margin-top: 1.8em;
     margin-left: -32px;
