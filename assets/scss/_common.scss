@@ -3,18 +3,19 @@ html {
     "ヒラギノ角ゴシック", Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
     Noto Color Emoji;
-  font-kerning: none;
-  overflow-wrap: break-word;
   line-height: 1.75;
 }
 
 body {
-  color: $text-color;
+  color: #333333;
   background-color: #ffffff;
-  font-family: Quicksand, -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+  letter-spacing: 0.25px;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
     "ヒラギノ角ゴシック", Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
     Noto Color Emoji;
+  font-kerning: none;
+  overflow-wrap: break-word;
   @include dark {
     color: darken(#fcfcfc, 10%);
     background-color: #292929;

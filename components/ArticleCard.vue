@@ -56,7 +56,7 @@ export default {
   }
 
   &__title {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     line-height: 1.4;
   }
 

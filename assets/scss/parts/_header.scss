@@ -27,6 +27,8 @@
   font-size: 2.1rem;
   letter-spacing: 0.07em;
   color: $text_color;
+  font-family: Quicksand, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
   @include dark {
     color: #fcfcfc;
   }
