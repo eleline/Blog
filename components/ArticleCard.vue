@@ -74,16 +74,19 @@ export default {
   &__date {
     color: rgba(#000000, 0.64);
     margin-bottom: 8px;
+    @media (prefers-color-scheme: dark) {
+      color: rgba(#fcfcfc, 0.64);
+    }
   }
 
   &__body {
-    color: rgba(#292929, 0.78);
+    color: rgba(#292929, 0.82);
     line-height: 1.6;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
     @media (prefers-color-scheme: dark) {
-      color: rgba(#fcfcfc, 0.78);
+      color: rgba(#fcfcfc, 0.82);
     }
   }
 }
