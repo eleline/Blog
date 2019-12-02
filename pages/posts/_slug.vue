@@ -43,8 +43,8 @@ export default {
         title: data.title,
         description: data.description,
         type: "article",
-        url: `https://eleline.site/${postId}/`,
-        image: "https://eleline.site/img/ogp/common.png"
+        url: `https://eleline.site/posts/${postId}/`,
+        image: data.hero.url
       }
     };
   }
@@ -228,15 +228,16 @@ pre {
   h2 {
     position: relative;
     margin-bottom: 1em;
+    line-height: 1.46;
     &::before {
       content: "#";
       position: absolute;
       top: 0;
-      bottom: 0;
-      left: 0;
+      margin: auto;
       color: #8a2be2;
       font-weight: bold;
       font-size: 1.2em;
+      font-family: Quicksand;
       margin-left: -0.85em;
       transform: translateY(-12%);
     }
@@ -244,14 +245,15 @@ pre {
 
   h3 {
     position: relative;
-    margin-bottom: calc(1em + 12px);
+    margin-bottom: calc(1em + 7px);
+    line-height: 1.5;
 
     &::before,
     &::after {
       content: "";
       position: absolute;
-      bottom: -9px;
-      height: 3px;
+      bottom: -6px;
+      height: 2px;
     }
 
     &::before {
@@ -277,7 +279,7 @@ pre {
   }
 
   pre {
-    font-size: 0.95em;
+    font-size: 0.9em;
     padding: 1.3rem 32px;
     margin-top: 1.8em;
     margin-left: -32px;

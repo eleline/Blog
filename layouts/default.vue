@@ -2,11 +2,10 @@
   <div>
     <header class="header">
       <nuxt-link to="/" class="flex no-underline">
-        <img class="logo__img" src="~/assets/img/eleline-logo.svg" alt="E" />
-        <h1 class="logo">LELINE</h1>
+        <h1 class="logo">ELELINE</h1>
       </nuxt-link>
     </header>
-    <div class="body">
+    <div class="flex">
       <nuxt />
     </div>
     <footer class="footer">
@@ -14,16 +13,3 @@
     </footer>
   </div>
 </template>
-
-<style lang="scss">
-.body {
-  display: flex;
-}
-.logo {
-  font-weight: normal;
-}
-.flex {
-  display: flex;
-  align-items: center;
-}
-</style>
