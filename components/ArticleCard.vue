@@ -7,6 +7,7 @@
       :to="'posts/' + post.id"
     >
       <h3 class="card__title">{{ post.title }}</h3>
+      <p class="card__date">{{ unixTime2ymd(post.date) }}</p>
       <p class="card__body">{{ post.description }}</p>
     </nuxt-link>
   </div>
@@ -14,7 +15,18 @@
 
 <script>
 export default {
-  props: ["posts"]
+  props: ["posts"],
+  methods: {
+    unixTime2ymd: function(intTime) {
+      const d = new Date(intTime);
+
+      const year = d.getFullYear();
+      const month = d.getMonth() + 1;
+      const day = d.getDate();
+
+      return `${year}年${month}月${day}日`;
+    }
+  }
 };
 </script>
 
@@ -42,7 +54,7 @@ export default {
   background-color: #f2f2f2;
   transition: all 300ms ease-out;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.215);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.165);
   @media (hover: hover) {
     &:hover {
       box-shadow: 0 7px 18px rgba(#8a2be2, 0.315);
@@ -56,8 +68,12 @@ export default {
   }
 
   &__title {
-    margin-bottom: 8px;
     line-height: 1.4;
+  }
+
+  &__date {
+    color: rgba(#000000, 0.64);
+    margin-bottom: 8px;
   }
 
   &__body {
