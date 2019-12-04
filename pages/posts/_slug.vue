@@ -80,7 +80,7 @@ export default {
 <style lang="scss">
 .content-title {
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   line-height: 1.4;
   &::after {
     content: "";
@@ -95,7 +95,7 @@ export default {
   }
 }
 .content-meta {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   color: rgba(#000, 0.64);
   @media (prefers-color-scheme: dark) {
     color: rgba(#fff, 0.64);
