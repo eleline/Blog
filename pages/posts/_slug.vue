@@ -1,7 +1,8 @@
 <template>
   <div class="full">
     <div class="main">
-      <h1 class="contents-title">{{ currentTitle }}</h1>
+      <h1 class="content-title">{{ currentTitle }}</h1>
+      <p class="content-meta">{{ unixTime2ymd(currentDate) }} / {{ currentAuther }}</p>
       <div class="content-thumbnail-frame">
         <picture>
           <source
@@ -36,6 +37,17 @@ export default {
   mounted() {
     Prism.highlightAll();
   },
+  methods: {
+    unixTime2ymd: function(intTime) {
+      const d = new Date(intTime);
+
+      const year = d.getFullYear();
+      const month = d.getMonth() + 1;
+      const day = d.getDate();
+
+      return `${year}年${month}月${day}日`;
+    }
+  },
   async asyncData({ env, route, $axios }) {
     const dir = route.path.split("/");
     const postId = dir[dir.length - 1];
@@ -51,6 +63,8 @@ export default {
       currentBody: data.body,
       currentTitle: data.title,
       currentThumbnail: data.hero.url,
+      currentDate: data.date,
+      currentAuther: data.auther,
       meta: {
         title: data.title,
         description: data.description,
@@ -64,6 +78,29 @@ export default {
 </script>
 
 <style lang="scss">
+.content-title {
+  position: relative;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 64px;
+    height: 4px;
+    margin-left: -2px;
+    border-radius: 2px;
+    background-color: #8a2be2;
+  }
+}
+.content-meta {
+  margin-bottom: 28px;
+  color: rgba(#000, 0.64);
+  @media (prefers-color-scheme: dark) {
+    color: rgba(#fff, 0.64);
+  }
+}
 .content-thumbnail-frame {
   --negative-left: 32px;
   width: calc(100% + var(--negative-left) * 2);
