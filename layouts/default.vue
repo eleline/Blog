@@ -9,7 +9,7 @@
       <nuxt />
     </div>
     <footer class="footer">
-      <p class="copyright">©eleline 2019</p>
+      <p class="copyright">©ELELINE 2019</p>
     </footer>
   </div>
 </template>
