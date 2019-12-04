@@ -7,7 +7,10 @@
       :to="'posts/' + post.id"
     >
       <div class="card__thumbnail-frame">
-        <img class="card__thumbnail" :src="post.hero.url" :alt="post.title + 'のサムネイル'" />
+        <picture>
+          <source class="card__thumbnail" type="image/webp" :srcset="post.hero.url + '?fm=webp'" />
+          <img class="card__thumbnail" :src="post.hero.url" :alt="post.title + 'のサムネイル'" />
+        </picture>
       </div>
       <h3 class="card__title">{{ post.title }}</h3>
       <p class="card__date">{{ unixTime2ymd(post.date) }}</p>
