@@ -6,6 +6,9 @@
       :key="index"
       :to="'posts/' + post.id"
     >
+      <div class="card__thumbnail-frame">
+        <img class="card__thumbnail" :src="post.hero.url" :alt="post.title + 'のサムネイル'" />
+      </div>
       <h3 class="card__title">{{ post.title }}</h3>
       <p class="card__date">{{ unixTime2ymd(post.date) }}</p>
       <p class="card__body">{{ post.description }}</p>
@@ -36,11 +39,14 @@ export default {
   display: grid;
   grid-template-columns: repeat(var(--column-count), 1fr);
   grid-gap: 32px;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     --column-count: 2;
   }
-  @media screen and (min-width: 1580px) {
+  @media screen and (min-width: 1024px) {
     --column-count: 3;
+  }
+  @media screen and (min-width: 1640px) {
+    --column-count: 4;
   }
 }
 
@@ -65,6 +71,18 @@ export default {
   @media (prefers-color-scheme: dark) {
     color: darken(#fcfcfc, 10%);
     background-color: #333;
+  }
+
+  &__thumbnail-frame {
+    width: calc(100% + 32px);
+    margin: -16px -16px 16px -16px;
+  }
+
+  &__thumbnail {
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    max-height: 164px;
   }
 
   &__title {
