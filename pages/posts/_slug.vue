@@ -2,6 +2,16 @@
   <div class="full">
     <div class="main">
       <h1 class="contents-title">{{ currentTitle }}</h1>
+      <div class="content-thumbnail-frame">
+        <picture>
+          <source
+            class="content-thumbnail"
+            type="image/webp"
+            :srcset="currentThumbnail + '?fm=webp'"
+          />
+          <img class="content-thumbnail" :src="currentThumbnail" :alt="currentTitle + 'のサムネイル'" />
+        </picture>
+      </div>
       <div v-if="loading">Loading</div>
       <article class="rich-text" v-else v-html="$md.render(currentBody)"></article>
     </div>
@@ -19,7 +29,8 @@ export default {
     return {
       loading: true,
       currentBody: "",
-      currentTitle: ""
+      currentTitle: "",
+      currentThumbnail: null
     };
   },
   mounted() {
@@ -39,6 +50,7 @@ export default {
       loading: false,
       currentBody: data.body,
       currentTitle: data.title,
+      currentThumbnail: data.hero.url,
       meta: {
         title: data.title,
         description: data.description,
@@ -52,6 +64,20 @@ export default {
 </script>
 
 <style lang="scss">
+.content-thumbnail-frame {
+  --negative-left: 32px;
+  width: calc(100% + var(--negative-left) * 2);
+  margin-bottom: 1.6em;
+  margin-left: calc(-1 * var(--negative-left));
+  @media screen and (min-width: 768px) {
+    --negative-left: 8;
+    border-radius: 8px;
+  }
+}
+.content-thumbnail {
+  width: 100%;
+  overflow: hidden;
+}
 .full {
   display: flex;
   width: 100%;

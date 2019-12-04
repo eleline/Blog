@@ -7,7 +7,10 @@
       :to="'posts/' + post.id"
     >
       <div class="card__thumbnail-frame">
-        <img class="card__thumbnail" :src="post.hero.url" :alt="post.title + 'のサムネイル'" />
+        <picture>
+          <source class="card__thumbnail" type="image/webp" :srcset="post.hero.url + '?fm=webp'" />
+          <img class="card__thumbnail" :src="post.hero.url" :alt="post.title + 'のサムネイル'" />
+        </picture>
       </div>
       <h3 class="card__title">{{ post.title }}</h3>
       <p class="card__date">{{ unixTime2ymd(post.date) }}</p>
@@ -74,8 +77,10 @@ export default {
   }
 
   &__thumbnail-frame {
-    width: calc(100% + 32px);
-    margin: -16px -16px 16px -16px;
+    --negative-left: 16px;
+    width: calc(100% + var(--negative-left) * 2);
+    margin: calc(-1 * var(--negative-left)) calc(-1 * var(--negative-left))
+      var(--negative-left) calc(-1 * var(--negative-left));
   }
 
   &__thumbnail {
