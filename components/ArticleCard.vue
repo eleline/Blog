@@ -77,8 +77,10 @@ export default {
   }
 
   &__thumbnail-frame {
-    width: calc(100% + 32px);
-    margin: -16px -16px 16px -16px;
+    --negative-left: 16px;
+    width: calc(100% + var(--negative-left) * 2);
+    margin: calc(-1 * var(--negative-left)) calc(-1 * var(--negative-left))
+      var(--negative-left) calc(-1 * var(--negative-left));
   }
 
   &__thumbnail {
