@@ -1,14 +1,27 @@
-# connect
+# Nuxt and microCMS Blog
 
 > eleline blog
 
-JAMStack Blog Template
+JAMStack Blog
 
 ## Use
 
 - Nuxt
 - Netlify
 - microCMS
+
+## Variable Setup
+
+Create for `.env`
+
+```env
+API_KEY = {microCMS API KEY}
+baseApiUrl = {microCMS API path}
+baseDesc = {Description}
+baseName = {Author}
+baseOgp = {Static OGP Image Path}
+baseUrl = {Site URL}
+```
 
 ## Build Setup
 
