@@ -2,7 +2,7 @@
 
 > eleline blog
 
-JAMStack ブログテンプレート
+JAMStack Blog Template
 
 ## Use
 
