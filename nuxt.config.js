@@ -10,9 +10,6 @@ const {
 } = process.env;
 
 module.exports = {
-  /*
-   ** Headers of the page
-   */
   head: {
     htmlAttrs: {
       lang: "ja",
@@ -38,17 +35,8 @@ module.exports = {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
-  /*
-   ** Customize the progress bar color
-   */
   loading: { color: "#8a2be2" },
-  /*
-   ** Build configuration
-   */
   build: {
-    /*
-     ** Run ESLint on save
-     */
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
