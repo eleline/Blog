@@ -15,12 +15,12 @@ JAMStack Blog
 Create for `.env`
 
 ```env
-API_KEY = {microCMS API KEY}
+API_KEY    = {microCMS API KEY}
 baseApiUrl = {microCMS API path}
-baseDesc = {Description}
-baseName = {Author}
-baseOgp = {Static OGP Image Path}
-baseUrl = {Site URL}
+baseDesc   = {Description}
+baseName   = {Author}
+baseOgp    = {Static OGP Image Path}
+baseUrl    = {Site URL}
 ```
 
 ## Build Setup
