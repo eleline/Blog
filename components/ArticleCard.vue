@@ -8,8 +8,16 @@
     >
       <div class="card__thumbnail-frame">
         <picture>
-          <source class="card__thumbnail" type="image/webp" :srcset="post.hero.url + '?fm=webp'" />
-          <img class="card__thumbnail" :src="post.hero.url" :alt="post.title + 'のサムネイル'" />
+          <source
+            class="card__thumbnail"
+            type="image/webp"
+            :srcset="post.hero.url + '?fm=webp'"
+          />
+          <img
+            class="card__thumbnail"
+            :src="post.hero.url"
+            :alt="post.title + 'のサムネイル'"
+          />
         </picture>
       </div>
       <h3 class="card__title">{{ post.title }}</h3>
@@ -60,7 +68,7 @@ export default {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   color: #292929;
-  background-color: #f2f2f2;
+  background-color: #f9f9f9;
   transition: all 300ms ease-out;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.165);
