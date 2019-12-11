@@ -68,7 +68,7 @@ export default {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   color: #292929;
-  background-color: #f9f9f9;
+  background-color: #fcfcfc;
   transition: all 300ms ease-out;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.165);
@@ -111,7 +111,7 @@ export default {
   }
 
   &__body {
-    color: rgba(#292929, 0.82);
+    color: rgba(#000000, 0.5);
     line-height: 1.6;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;

@@ -7,26 +7,19 @@
   align-items: center;
   justify-content: space-around;
   border-bottom: solid 1px rgba($gray_color, 0.25);
-  background-color: $background-color;
+  background-color: $primary_color;
   z-index: 1;
-  @include tablet {
-    padding: 0 $padding-p-h * 4;
-  }
   @include desktop {
     justify-content: left;
   }
-  @include raptop {
-    padding: 0 $padding-p-h * 7;
-  }
   @include dark {
-    background-color: #292929;
   }
 }
 
 .logo {
-  font-size: 2.1rem;
+  font-size: 1.85rem;
   letter-spacing: 0.07em;
-  color: $text_color;
+  color: #fcfcfc;
   font-family: Quicksand, sans-serif, Apple Color Emoji, Segoe UI Emoji,
     Segoe UI Symbol, Noto Color Emoji;
   @include dark {

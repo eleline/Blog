@@ -2,7 +2,9 @@
   <div class="full">
     <div class="main">
       <h1 class="content-title">{{ currentTitle }}</h1>
-      <p class="content-meta">{{ unixTime2ymd(currentDate) }} / {{ currentAuther }}</p>
+      <p class="content-meta">
+        {{ unixTime2ymd(currentDate) }} / {{ currentAuther }}
+      </p>
       <div class="content-thumbnail-frame">
         <picture>
           <source
@@ -10,13 +12,20 @@
             type="image/webp"
             :srcset="currentThumbnail + '?fm=webp'"
           />
-          <img class="content-thumbnail" :src="currentThumbnail" :alt="currentTitle + 'のサムネイル'" />
+          <img
+            class="content-thumbnail"
+            :src="currentThumbnail"
+            :alt="currentTitle + 'のサムネイル'"
+          />
         </picture>
       </div>
       <div v-if="loading">Loading</div>
-      <article class="rich-text" v-else v-html="$md.render(currentBody)"></article>
+      <article
+        class="rich-text"
+        v-else
+        v-html="$md.render(currentBody)"
+      ></article>
     </div>
-    <div class="side">サイド</div>
   </div>
 </template>
 
