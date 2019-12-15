@@ -1,26 +1,28 @@
 # Nuxt and microCMS Blog
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6bd1f176-0b2d-4217-9e24-ac52e97f773f/deploy-status)](https://app.netlify.com/sites/eleline-jamstack-blog/deploys)
+
 > eleline blog
 
 JAMStack Blog
 
-## Use
+## Powered by
 
-- Nuxt
-- Netlify
-- microCMS
+- [Nuxt](https://ja.nuxtjs.org/)
+- [Netlify](https://www.netlify.com/)
+- [microCMS](https://microcms.io/)
 
 ## Variable Setup
 
 Create for `.env`
 
 ```env
-API_KEY    = {microCMS API KEY}
-baseApiUrl = {microCMS API path}
-baseDesc   = {Description}
-baseName   = {Author}
-baseOgp    = {Static OGP Image Path}
-baseUrl    = {Site URL}
+API_KEY    = { microCMS API KEY }
+baseApiUrl = { microCMS API path }
+baseDesc   = { Description }
+baseName   = { Author }
+baseOgp    = { Static OGP Image Path }
+baseUrl    = { Site URL }
 ```
 
 ## Build Setup
