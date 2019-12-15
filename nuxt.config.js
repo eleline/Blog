@@ -28,7 +28,7 @@ module.exports = {
       {
         hid: "og:image",
         property: "og:image",
-        content: `https://eleline.site/${baseOgp}/common.png`
+        content: `https://eleline.dev/${baseOgp}/common.png`
       },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@eleline5" }

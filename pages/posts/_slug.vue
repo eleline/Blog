@@ -78,7 +78,7 @@ export default {
         title: data.title,
         description: data.description,
         type: "article",
-        url: `https://eleline.site/posts/${postId}/`,
+        url: `https://eleline.dev/posts/${postId}/`,
         image: data.hero.url
       }
     };
